@@ -16,7 +16,5 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           # Specify Browser since container image is compile with Firefox
-          build: npm run build
-          start: npm start
           spec: cypress/integration/mcs/create_a_web_app.spec.js
           browser: chrome

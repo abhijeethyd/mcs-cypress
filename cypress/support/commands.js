@@ -25,6 +25,7 @@
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('login', (username, password) => {
+    cy.visit("https://lowcodeazure.azurewebsites.net/");
     cy.get("a[href='/Account/Login']").click();
     cy.get("input[name=usernameOrEmailAddress]").type(username);
     cy.get("input[name=password]").type(password);

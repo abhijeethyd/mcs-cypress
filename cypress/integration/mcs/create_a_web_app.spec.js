@@ -11,7 +11,7 @@ context("Create a WebApp", () => {
       cy.get("button[data-id='SelectAppserviceplanCombobox']",{ timeout: 10000 }).should('be.visible').click();
       cy.get("a").contains('Free - 1 - 1.75GB - 1GB - Free - Free').click();
       cy.get("button").contains('Build').click();      
-      cy.get('#BuildWebApp > div > table > tbody > tr:nth-child(1) > td > div > label').should('contain.text', 'Build Resource Group')
+      cy.get('#BuildWebApp > div > table > tbody > tr:nth-child(1) > td > div > label',{ timeout: 20000 }).should('contain.text', 'Build Resource Group')
       cy.get('#BuildWebApp > div > table > tbody > tr:nth-child(1) > td > div > i',{ timeout: 20000 }).should('be.visible').should('contain.text', 'Success');
       cy.get('#BuildWebApp > div > table > tbody > tr:nth-child(2) > td > div > label').should('contain.text', 'Build Service Plan')
       cy.get('#BuildWebApp > div > table > tbody > tr:nth-child(2) > td > div > i',{ timeout: 20000 }).should('be.visible').should('contain.text', 'Success');
